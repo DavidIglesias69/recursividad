@@ -2,6 +2,10 @@
 public class Recorsividad {
 	
 	public static void main(String[] args) {
+		int num =devolverNumeroDigitos (37559);
+		System.out.println(num);
+		System.out.println("");
+		System.out.println("-----------------------");
 		imprimirNPrimerosNumeros1 (9);
 		System.out.println("");
 		System.out.println("-----------------------");
@@ -49,6 +53,14 @@ public static void imprimirNPrimerosNumeros1 (int n) {
 	
 }
 
+public static int devolverNumeroDigitos (int n) {
+	if (n<1) {
+		return 0;
+	}
+	
+	return 1+ devolverNumeroDigitos (n/10);
+	
+}
 
 
 }
