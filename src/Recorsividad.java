@@ -2,6 +2,14 @@
 public class Recorsividad {
 	
 	public static void main(String[] args) {
+		int num2= potencia(2,3);
+		System.out.println(num2);
+		System.out.println("");
+		System.out.println("-----------------------");
+		int num1=fibonacci(7);
+		System.out.println(num1);
+		System.out.println("");
+		System.out.println("-----------------------");
 		int num =devolverNumeroDigitos (37559);
 		System.out.println(num);
 		System.out.println("");
@@ -62,5 +70,22 @@ public static int devolverNumeroDigitos (int n) {
 	
 }
 
+
+public static int fibonacci (int n) {
+	if (n==1 || n==0) {
+		return n;
+	}
+	return  fibonacci (n-1)+fibonacci(n-2);
+}
+
+public static int potencia(int base, int exponente) {
+	if (exponente==0) {
+		return 1;
+	}
+
+	return base*potencia(base,exponente-1);
+	
+	
+}
 
 }
