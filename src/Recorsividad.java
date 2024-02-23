@@ -2,6 +2,8 @@
 public class Recorsividad {
 	
 	public static void main(String[] args) {
+		String nu1 = invertir(32456);
+		System.out.println(nu1);
 		int num2= potencia(2,3);
 		System.out.println(num2);
 		System.out.println("");
@@ -85,7 +87,15 @@ public static int potencia(int base, int exponente) {
 
 	return base*potencia(base,exponente-1);
 	
+}
+public static String invertir (int n) {
+	if(n<10) {
+		return ""+ n;
+	}
+	return n%10 +invertir(n/10);
 	
 }
+
+
 
 }
