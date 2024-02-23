@@ -2,8 +2,13 @@
 public class Recorsividad {
 	
 	public static void main(String[] args) {
+		System.out.println(esPalindromo("radakr"));
+		System.out.println(ordenarPalabra ("abcdp"));
+		
+		
 		String nu1 = invertir(32456);
 		System.out.println(nu1);
+		
 		int num2= potencia(2,3);
 		System.out.println(num2);
 		System.out.println("");
@@ -95,7 +100,25 @@ public static String invertir (int n) {
 	return n%10 +invertir(n/10);
 	
 }
+public static boolean ordenarPalabra (String cadena1) {
+	if (cadena1.length()==1) {
+		return true;
+	}
+	boolean ordenado=cadena1.charAt(0) <= cadena1.charAt(1);
+		return ordenado && ordenarPalabra (cadena1.substring(1,cadena1.length()-1));
+	
+	
+	
+}
 
+public static boolean esPalindromo (String cadena2) {
+	if(cadena2.length()==1 || cadena2.length()==0) {
+		return true;
+	}
+		boolean primeraUltima = cadena2.charAt(0)==cadena2.charAt(cadena2.length()-1);
+		return primeraUltima && esPalindromo(cadena2.substring(1,cadena2.length()-1));
+	}
+	
 
 
 }
